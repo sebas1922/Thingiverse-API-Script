@@ -4,6 +4,7 @@ import json
 import os
 import shutil
 import sys
+from dotenv import load_dotenv
 
 """
 TODO
@@ -58,7 +59,8 @@ def get_thing_info(url, thing_ID, token):
 
 def main():  
     #Token authenticates this script to make requests to API
-    APP_TOKEN = "e27217bf2313ca65d1aae6ce39a681a0"
+    load_dotenv()
+    APP_TOKEN = os.getenv("APP_TOKEN")
     URL = "https://api.thingiverse.com/"
     main_dir = os.getcwd()
 
