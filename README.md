@@ -5,6 +5,12 @@ USAGE:
 The user can specifiy a search term for models they want to download as well as the amount of models being downloaded. The script creates a file for 
 each model containing a picture, description, and all neccesary .stl files needed for the 3D printing software. 
 
+For example, if the user wants to download the first 10 thigns that pop up under the search 'batman', the user can do the following:
+
+    python thingiversescraper.py -s batman -n 10
+
+The script will download the thumbnail and description of each thing as well as the .stl files needed for the slicer, facilitating the process of searching for  things through the website itself.
+
 
 ## Setup Instructions
 
@@ -29,6 +35,25 @@ each model containing a picture, description, and all neccesary .stl files neede
 5. **Run the application**
 
     python thingiversescraper.py -s your-search-term -n number-of-models-wanted
+
+
+## App token instructions:
+ 
+Go to https://www.thingiverse.com/apps/create and log in to Thingiverse.com
+Go through the process of getting app token
+
+1. SELECT A PLATFORM:
+    Select Desktop App
+
+2. BASIC INFORMATION:
+    Fill in each field (doesn't really matter what you put)
+
+3. API INFORMATION:
+    Once authenticated and redirected, copy the App Token field
+
+4. Add to APP_TOKEN and script is ready to be run
+
+
 
 
 
